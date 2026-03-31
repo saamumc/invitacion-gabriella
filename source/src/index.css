@@ -1,0 +1,60 @@
+/* Agrega esta línea al principio de src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  /* Cambiado a Poppins para mejor lectura en español */
+  font-family: "Poppins", system-ui, -apple-system, sans-serif;
+  background-color: #F9F6F1; /* Color crema para que coincida con el App.jsx */
+  color: #5D4037;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Selector de idioma más robusto */
+.language-selector {
+  background: white;
+  border-radius: 50px;
+  width: 100%;
+  max-width: 160px;
+  position: relative;
+  z-index: 100;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  /* Aplicamos la animación aquí si quieres que aparezca suavemente */
+  animation: slideIn 0.5s ease-out;
+}
+
+/* Selectores genéricos para React-Select (más seguros que las clases .css-xxx) */
+.language-selector [class*="-Control"] {
+  border-radius: 50px !important;
+  min-height: 44px !important;
+  border: none !important;
+}
+
+.language-selector [class*="-Menu"] {
+  border-radius: 16px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
