@@ -4,10 +4,8 @@ import { Provider } from "react-redux";
 import { store } from "./store/store";
 import App from "./App";
 import "./index.css";
-import { initializeFirebaseListeners } from "./firebase/firebaseMiddleware";
 
-// Inicializamos los listeners y guardamos la función de limpieza
-const cleanup = initializeFirebaseListeners(store);
+
 
 const container = document.getElementById("root");
 
